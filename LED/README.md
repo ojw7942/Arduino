@@ -1,5 +1,4 @@
 ## LED 깜박이기
-## a와 b로 LED 켜고 끄기
 
 ![](./IMAGES/led00.png)
 
