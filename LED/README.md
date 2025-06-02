@@ -2,9 +2,9 @@
 ## a와 b로 LED 켜고 끄기
 
 ![](./IMAGES/led00.png)
-```C
 
-```
+
+```c
 void setup() {
    Serial.begin(9600);
    pinMode(7,OUTPUT);
@@ -24,3 +24,4 @@ void loop() {
     }
   }
 }
+```
