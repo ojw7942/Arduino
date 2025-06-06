@@ -24,6 +24,7 @@ void loop() {
   }
 }
 ```
+![](./IMAGES/ex12.jpg)
 
 ## a와 b로 LED 켜고 끄기
 
@@ -50,6 +51,8 @@ void loop() {
   delay(1000);
 }
 ```
+![](./IMAGES/ex13.jpg)
+
 ## 버튼으로 
 ## RED, BLUE LED 번갈아 깜박이기
 
@@ -91,6 +94,6 @@ int buttonValue = !digitalRead(BUTTON);
   }  
 }
 ```
-![](./IMAGES/Aduino03.pptx)
+![](./IMAGES/ex14.jpg)
 
 
