@@ -25,7 +25,7 @@ void setup(){
   }
 ```
 
-![](./IMAGES1/lcd04.png)
+![](./IMAGES1/lcd05.png)
 
 ```c
 #include <Adafruit_LiquidCrystal.h>
@@ -78,7 +78,7 @@ void loop()
 }
 ```
 
-![](./IMAGES1/lcd05.png)
+![](./IMAGES1/lcd04.png)
 
 ```c
 
