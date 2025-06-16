@@ -1,1 +1,7 @@
-
+![](./IMAGES1/buzzer.png)
+![](./IMAGES1/lcd01.png)
+![](./IMAGES1/lcd04.png)
+![](./IMAGES1/lcd05.png)
+![](./IMAGES1/lcd06.png)
+![](./IMAGES1/photo01.png)
+![](./IMAGES1/photo02.png)
