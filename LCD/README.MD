@@ -26,7 +26,7 @@ void setup(){
 ```
 
 ![](./IMAGES1/lcd05.png)
-##Tinkercad
+#Tinkercad
 ```c
 #include <Adafruit_LiquidCrystal.h>
 
@@ -52,7 +52,7 @@ void loop()
   seconds += 1;
 }
 ```
-##arduino
+#arduino
 ```c
 #include <LiquidCrystal_I2C.h>
 
