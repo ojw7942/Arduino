@@ -200,24 +200,36 @@ void loop()
 
 ![](./IMAGES/d07.png)
 ```c
-#include <Servo.h> //use library <Servo.h> (1m)
-Servo myservo; //name the pin of servo motor as myservo (1m)
+Sweep
+  by BARRAGAN <http://barraganstudio.com>
+  This example code is in the public domain.
+  modified 8 Nov 2013  by Scott Fitzgerald
+  http://www.arduino.cc/en/Tutorial/Sweep
+*/
+#include <Servo.h>
 
-//int angle = 0; //current angle
-//int direc = 0; //currrent direction;0=clockwise;1=anti-clockwise
-
-void setup(){
-  myservo.attach(6); //pwm to D6
+int pos = 0;
+Servo servo_9;
+void setup()
+{
+  servo_9.attach(9, 500, 2500);
 }
 
-void loop(){
-  for(int ang=0; ang<180; ang++){ //clockwise
-    myservo.write(ang); //rotate pin of servo motor (1m) 
-    delay(50); //for 0.05 second (1m)
+void loop()
+{
+  // sweep the servo from 0 to 180 degrees in steps
+  // of 1 degrees
+  for (pos = 0; pos <= 180; pos += 1) {
+    // tell servo to go to position in variable 'pos'
+    servo_9.write(pos);
+    // wait 15 ms for servo to reach the position
+    delay(15); // Wait for 15 millisecond(s)
   }
-  for(int ang=180; ang>0; ang--){ //anti-clockwise
-    myservo.write(ang);
-    delay(50);
+  for (pos = 180; pos >= 0; pos -= 1) {
+    // tell servo to go to position in variable 'pos'
+    servo_9.write(pos);
+    // wait 15 ms for servo to reach the position
+    delay(15); // Wait for 15 millisecond(s)
   }
 }
 ```
