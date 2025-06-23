@@ -236,6 +236,31 @@ void loop()
 
 ![](./IMAGES/d08.png)
 ```c
+#include <Servo.h> //use library <Servo.h> (1m)
+Servo myservo; //name the pin of servo motor as myservo (1m)
+
+//int angle = 0; //current angle
+//int direc = 0; //currrent direction;0=clockwise;1=anti-clockwise
+
+void setup(){
+  myservo.attach(6); //pwm to D6
+}
+
+void loop(){
+  for(int ang=0; ang<180; ang++){ //clockwise
+    myservo.write(ang); //rotate pin of servo motor (1m) 
+    delay(50); //for 0.05 second (1m)
+  }
+  for(int ang=180; ang>0; ang--){ //anti-clockwise
+    myservo.write(ang);
+    delay(50);
+  }
+}
+
+```
+
+![](./IMAGES/d09.png)
+```c
 #include <Servo.h>
 
 Servo servo_5;
@@ -270,7 +295,7 @@ void loop()
 
 ```
 
-![](./IMAGES/d09.png)
+![](./IMAGES/d10.png)
 ```c
 #include <Servo.h>
 Servo servoMotor;
@@ -283,41 +308,6 @@ void loop () {
   potPos = map(analogRead(A0), 0, 1023, 0, 180);
   servoMotor.write(potPos);
   delay(15);
-}
-```
-
-![](./IMAGES/d10.png)
-```c
-#include <Servo.h>
-
-Servo servo_5;
-Servo servo_4;
-Servo servo_3;
-Servo servo_2;
-
-void setup()
-{
-  pinMode(A3, INPUT);
-  servo_5.attach(11);
-
-  pinMode(A2, INPUT);
-  servo_4.attach(10);
-
-  pinMode(A1, INPUT);
-  servo_3.attach(9);
-
-  pinMode(A0, INPUT);
-  servo_2.attach(8);
-
-}
-
-void loop()
-{
-  servo_5.write(map(analogRead(A3), 0, 1023, 0, 180));
-  servo_4.write(map(analogRead(A2), 0, 1023, 0, 180));
-  servo_3.write(map(analogRead(A1), 0, 1023, 0, 180));
-  servo_2.write(map(analogRead(A0), 0, 1023, 0, 180));
-  delay(10); // Delay a little bit to improve simulation performance
 }
 ```
 
