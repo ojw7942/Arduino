@@ -259,7 +259,7 @@ void loop(){
 
 ```
 
-![](./IMAGES/d09.png)
+![](./IMAGES/d10.png)
 ```c
 #include <Servo.h>
 
@@ -295,7 +295,7 @@ void loop()
 
 ```
 
-![](./IMAGES/d10.png)
+![](./IMAGES/d11.png)
 ```c
 #include <Servo.h>
 Servo servoMotor;
@@ -311,7 +311,7 @@ void loop () {
 }
 ```
 
-![](./IMAGES/d11.png)
+![](./IMAGES/d12.png)
 ```c
 #include <Servo.h>
 Servo servoMotor;
