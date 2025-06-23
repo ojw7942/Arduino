@@ -200,80 +200,6 @@ void loop()
 
 ![](./IMAGES/d07.png)
 ```c
-/*
-  Sweep
-  by BARRAGAN <http://barraganstudio.com>
-  This example code is in the public domain.
-  modified 8 Nov 2013  by Scott Fitzgerald
-  http://www.arduino.cc/en/Tutorial/Sweep
-*/
-#include <Servo.h>
-
-int pos = 0;
-Servo servo_9;
-void setup()
-{
-  servo_9.attach(9, 500, 2500);
-}
-
-void loop()
-{
-  // sweep the servo from 0 to 180 degrees in steps
-  // of 1 degrees
-  for (pos = 0; pos <= 180; pos += 1) {
-    // tell servo to go to position in variable 'pos'
-    servo_9.write(pos);
-    // wait 15 ms for servo to reach the position
-    delay(15); // Wait for 15 millisecond(s)
-  }
-  for (pos = 180; pos >= 0; pos -= 1) {
-    // tell servo to go to position in variable 'pos'
-    servo_9.write(pos);
-    // wait 15 ms for servo to reach the position
-    delay(15); // Wait for 15 millisecond(s)
-  }
-}
-```
-
-![](./IMAGES/d08.png)
-```c
-/*
-  Sweep
-  by BARRAGAN <http://barraganstudio.com>
-  This example code is in the public domain.
-  modified 8 Nov 2013  by Scott Fitzgerald
-  http://www.arduino.cc/en/Tutorial/Sweep
-*/
-#include <Servo.h>
-
-int pos = 0;
-Servo servo_9;
-void setup()
-{
-  servo_9.attach(9, 500, 2500);
-}
-
-void loop()
-{
-  // sweep the servo from 0 to 180 degrees in steps
-  // of 1 degrees
-  for (pos = 0; pos <= 180; pos += 1) {
-    // tell servo to go to position in variable 'pos'
-    servo_9.write(pos);
-    // wait 15 ms for servo to reach the position
-    delay(15); // Wait for 15 millisecond(s)
-  }
-  for (pos = 180; pos >= 0; pos -= 1) {
-    // tell servo to go to position in variable 'pos'
-    servo_9.write(pos);
-    // wait 15 ms for servo to reach the position
-    delay(15); // Wait for 15 millisecond(s)
-  }
-}
-```
-
-![](./IMAGES/d09.png)
-```c
 #include <Servo.h> //use library <Servo.h> (1m)
 Servo myservo; //name the pin of servo motor as myservo (1m)
 
@@ -293,6 +219,58 @@ void loop(){
     myservo.write(ang);
     delay(50);
   }
+}
+```
+
+![](./IMAGES/d08.png)
+```c
+#include <Servo.h>
+
+Servo servo_5;
+Servo servo_4;
+Servo servo_3;
+Servo servo_2;
+
+void setup()
+{
+  pinMode(A3, INPUT);
+  servo_5.attach(11);
+
+  pinMode(A2, INPUT);
+  servo_4.attach(10);
+
+  pinMode(A1, INPUT);
+  servo_3.attach(9);
+
+  pinMode(A0, INPUT);
+  servo_2.attach(8);
+
+}
+
+void loop()
+{
+  servo_5.write(map(analogRead(A3), 0, 1023, 0, 180));
+  servo_4.write(map(analogRead(A2), 0, 1023, 0, 180));
+  servo_3.write(map(analogRead(A1), 0, 1023, 0, 180));
+  servo_2.write(map(analogRead(A0), 0, 1023, 0, 180));
+  delay(10); // Delay a little bit to improve simulation performance
+}
+
+```
+
+![](./IMAGES/d09.png)
+```c
+#include <Servo.h>
+Servo servoMotor;
+int potPos;
+
+void setup() {
+  servoMotor.attach(9);
+}
+void loop () {
+  potPos = map(analogRead(A0), 0, 1023, 0, 180);
+  servoMotor.write(potPos);
+  delay(15);
 }
 ```
 
