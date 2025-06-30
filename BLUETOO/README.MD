@@ -77,7 +77,7 @@ void loop() {
   delay(1000);
 }
 ```    
-![](./IMAGES/s02.png)
+![](./IMAGES/s03.png)
 ```c
 const int potPin = A0;     // 가변저항 중앙 핀 (아날로그 입력)
 const int ledPin = 2;      // PWM 출력 핀에 연결된 LED
