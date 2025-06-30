@@ -22,6 +22,7 @@ void loop(){
 ```
 ![](./IMAGES/z03.png)
 
+## Tinkercad에서 버튼을 누를 때마다 상태가 토글되며 부저가 울리거나 멈추게 하도록 구현하시오.
 ![](./IMAGES/s01.png)
 ```c
 const int buttonPin = 8;    // 버튼 핀
@@ -49,6 +50,7 @@ void loop() {
   lastButtonState = currentButtonState;  // 현재 상태를 이전 상태로 저장
 }
 ```
+## Tinkercad에서 RGB LED를 이용해 색이 빨강 → 초록 → 파랑 순으로 1초마다 바뀌도록 회로도와 코드를 작성하시오.
 ![](./IMAGES/s02.png)
 ```c
 const int redPin = 9;
@@ -77,6 +79,7 @@ void loop() {
   delay(1000);
 }
 ```    
+## Tinkercad에서 가변저항을 이용해 LED 밝기를 제어하는 회로를 만들고, 코드에 주석을 추가해 동작 원리를 설명하시오.
 ![](./IMAGES/s03.png)
 ```c
 const int potPin = A0;     // 가변저항 중앙 핀 (아날로그 입력)
