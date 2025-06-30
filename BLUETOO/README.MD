@@ -94,6 +94,68 @@ void loop() {
 }
 ```
 
+## 배열을 이용하여 학생 10명의 수학 점수를 입력받고, 최고 점수와 최저 점수를 출력하는 프로그램을 완성하시오.
+```c
+#include <stdio.h>
+
+int main() {
+    int scores[10];        // 학생 10명의 점수를 저장할 배열
+    int max, min;          // 최고 점수와 최저 점수를 저장할 변수
+
+    // 점수 입력
+    printf("학생 10명의 수학 점수를 입력하세요:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%d번 학생 점수: ", i + 1);
+        scanf("%d", &scores[i]);
+    }
+
+    // 초기 최고/최저 값 설정
+    max = min = scores[0];
+
+    // 최고점 및 최저점 찾기
+    for (int i = 1; i < 10; i++) {
+        if (scores[i] > max) {
+            max = scores[i];
+        }
+        if (scores[i] < min) {
+            min = scores[i];
+        }
+    }
+
+    // 결과 출력
+    printf("최고 점수: %d\n", max);
+    printf("최저 점수: %d\n", min);
+
+    return 0;
+}
+```
+
+## 배열 int data[6] = {1, 2, 3, 4, 5, 6}의 원소 순서를 {6, 5, 4, 3, 2, 1}로 뒤집는 프로그램을 작성하시오.
+```c
+#include <stdio.h>
+
+int main() {
+    int data[6] = {1, 2, 3, 4, 5, 6};
+    int temp;
+
+    // 배열을 뒤집는 로직 (앞뒤 교환)
+    for(int i = 0; i < 6 / 2; i++) {
+        temp = data[i];
+        data[i] = data[5 - i];
+        data[5 - i] = temp;
+    }
+
+    // 결과 출력
+    printf("뒤집힌 배열: ");
+    for(int i = 0; i < 6; i++) {
+        printf("%d ", data[i]);
+    }
+
+    return 0;
+}
+```
+
+
 
 
 
