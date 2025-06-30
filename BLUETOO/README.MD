@@ -77,6 +77,22 @@ void loop() {
   delay(1000);
 }
 ```    
+![](./IMAGES/s02.png)
+```c
+const int potPin = A0;     // 가변저항 중앙 핀 (아날로그 입력)
+const int ledPin = 2;      // PWM 출력 핀에 연결된 LED
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  int potValue = analogRead(potPin);              // 0~1023 입력
+  int brightness = map(potValue, 0, 1023, 0, 255); // 0~255로 변환
+  analogWrite(ledPin, brightness);                // LED 밝기 조절
+  delay(10);
+}
+```
 
 
 
