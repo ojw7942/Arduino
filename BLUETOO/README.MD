@@ -1,5 +1,4 @@
 ![](./IMAGES/z01.png)
-![](./IMAGES/z02.png)
 
 ```C
 #include<SoftwareSerial.h>
