@@ -1,5 +1,5 @@
-![](./IMAGES/Z01.png)
-![](./IMAGES/Z02.png)
+![](./IMAGES/z01.png)
+![](./IMAGES/z02.png)
 
 ```C
 #include<SoftwareSerial.h>
@@ -22,4 +22,4 @@ void loop(){
 }
 ```
 
-![](./IMAGES/Z03.png)
+![](./IMAGES/z03.png)
