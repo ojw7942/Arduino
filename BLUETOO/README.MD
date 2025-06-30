@@ -174,6 +174,29 @@ int main() {
 }
 ```
 
+## 버튼을 눌렀을 때 LED가 켜지도록 하는 아두이노 코드를 작성하시오.
+```c
+const int buttonPin = 2;  // 버튼 핀
+const int ledPin = 13;    // LED 핀
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP);  // 내부 풀업 저항 사용
+  pinMode(ledPin, OUTPUT);            // LED 출력 모드
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin);  // 버튼 상태 읽기
+
+  if (buttonState == LOW) {       // 버튼이 눌렸을 때 (LOW)
+    digitalWrite(ledPin, HIGH);   // LED 켜기
+  } else {
+    digitalWrite(ledPin, LOW);    // LED 끄기
+  }
+}
+```
+
+
+
 
 
 
