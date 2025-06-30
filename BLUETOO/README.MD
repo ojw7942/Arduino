@@ -155,6 +155,25 @@ int main() {
 }
 ```
 
+## 1부터 10까지의 정수를 더한 합을 구하는 while문을 작성하시오.
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 1;      // 시작 값
+    int sum = 0;    // 합계를 저장할 변수
+
+    while (i <= 10) {
+        sum += i;   // i를 sum에 더함
+        i++;        // i 값을 1 증가
+    }
+
+    printf("1부터 10까지의 합: %d\n", sum);
+
+    return 0;
+}
+```
+
 
 
 
